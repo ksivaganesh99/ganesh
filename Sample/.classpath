@@ -4,11 +4,12 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="D:/apache-tomcat-8.0.30-windows-x86/apache-tomcat-8.0.30/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/asm-3.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jersey-core-1.8.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jersey-json-1.8.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jersey-server-1.8.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsr311-api-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/ATG/ATG11.0/MySQL/mysql-connector-java-5.1.15-bin.jar"/>
+	<classpathentry kind="lib" path="D:/apache-tomcat-8.0.30-windows-x86/apache-tomcat-8.0.30/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
