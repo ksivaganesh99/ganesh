@@ -36,11 +36,13 @@
 })();
 </script>
 <script type="text/javascript" src="JS/jquery-1.12.0.min.js"></script>
+<link href="fonts/open-iconic-master/font/css/open-iconic-bootstrap.css" rel="stylesheet"></link>
 <link href="CSS/bootstrap.min.css" rel="stylesheet"></link>
 <link href="CSS/sample.css" rel="stylesheet"></link>
+<link href="CSS/angularbetteplaceholder.css" rel="stylesheet"></link>
 <script type="text/javascript" src="JS/angular.min.js"></script>
 
-
+<script type="text/javascript" src="JS/angularbetterplaceholder.js"></script>
 <script type="text/javascript"
 	src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.5.7/js/ngDialog.min.js"></script>
 <script src="JS/bootstrap.min.js"></script>
@@ -184,17 +186,43 @@
 		<button ng-click="add();">Add</button>
 		{{student.name}} <input type="text" ng-model="student.name"></input>
 		<div mydirective></div>
-		
+		<i class="oi-arrow-circle-right"></i> Hai dsfvdfvd
 		<button ng-click="studentdetails()">studentdetails</button>
+		<input type="text"></input>
 		<!-- <div class="row">
 	<div class="col-xs-8 col-md-6" style="background-color:red;">sd</div>
 	<div class="col-xs-4 col-md-6" style="background-color:blue;">sda</div>
 
 </div> -->
+<form class="well input-form" name="loginform" ng-submit="submit();">
+<div class="row">
 
+
+<div class="col-xs-12 col-sm-6 col-md-5 col-lg-12 form-group  has-feedback" ng-class="{'has-success' : loginform.email.$dirty && loginform.email.$valid , 'has-error' : loginform.email.$dirty && loginform.email.$invalid}">
+<!-- <label for="email" class="control-label">Email:</label> -->
+<input type="email"  class="better-placeholder form-control" name="email" id="email" placeholder="Email" ng-model="data.email"></input>
+<span class="glyphicon  form-control-feedback" ng-class="{'glyphicon-ok' : loginform.email.$dirty && loginform.email.$valid , 'glyphicon-remove' : loginform.email.$dirty && loginform.email.$invalid}" aria-hidden="true"></span>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-12 form-group has-feedback"  ng-class="{'has-success' : loginform.password.$dirty  && loginform.password.$valid, 'has-error' : loginform.password.$dirty && loginform.password.$invalid}">
+<!-- <label for="password" class="control-label">Password:</label> -->
+<input type="password"  class="better-placeholder form-control" id="password" name="password" placeholder="Password" ng-model="data.password" required></input>
+
+
+
+
+</div>
+
+
+<button  class=" btn btn-primary"  type="submit" ng-disabled="loginform.$invalid">Submit</button>
+</div>
+
+{{loginform.email}}
+</form>
 	</div>
 
 <div id="janrainEngageEmbed"></div>
+
+
 
 </body>
 <script>

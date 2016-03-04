@@ -1,6 +1,6 @@
 'use strict';
 
-var myapp=angular.module('Myapp',['ui.router','ngDialog']);
+var myapp=angular.module('Myapp',['ui.router','ngDialog','angularBetterPlaceholder']);
 
 
 

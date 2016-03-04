@@ -50,4 +50,10 @@ myapp.controller("homeController",["$scope","add","ngDialog","$http",function($s
 		
 	};
 	
+	$scope.submit=function(){
+		alert($scope.data.email);
+		alert($scope.data.password);
+	};
+	
+	
 }]);
