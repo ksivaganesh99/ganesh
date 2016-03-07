@@ -6,6 +6,7 @@ myapp.controller("homeController",["$scope","add","ngDialog","$http",function($s
 	$scope.studentArray=[];
 	$scope.studentArray.push({"id":1,"name":"siva","salary":5000});
 	$scope.count=0;
+	$scope.showModel=false;
 	/*$scope.student.name="siva";
 	$scope.student.id=99;*/
 	$scope.addtocart=function(event){
@@ -49,11 +50,32 @@ myapp.controller("homeController",["$scope","add","ngDialog","$http",function($s
 	 });
 		
 	};
-	
+	$scope.loading=true;
 	$scope.submit=function(){
+		$scope.loading=false;
+		$http.get("/Sample/MainServlet", {email : $scope.data.email}).success(function(data){
+			alert(data);
+			$scope.loading=true;
+		}).error(function(){
+			$scope.loading=true;
+			
+		});
+		
 		alert($scope.data.email);
 		alert($scope.data.password);
 	};
-	
+	$scope.togglemodel=function(){
+		
+		 ngDialog.openConfirm({            
+	            template: 'loginform.html',
+	            scope:$scope           
+	        }).then(function(value){
+	        	
+	        },function(reject){
+	            console.log(reject);
+	            
+	            
+	        });
+	};
 	
 }]);

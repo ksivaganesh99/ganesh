@@ -1,6 +1,7 @@
 package com.studentservelet;
 
 import com.database.*;
+
 import com.trail.Angular;
 
 import java.io.IOException;
@@ -45,7 +46,8 @@ public class MainServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-			System.out.println(request.getParameter("name"));
+			System.out.println(request.getAttribute("email"));
+			
 		Angular angular=new Angular();
 		//angular.postStudentDetails(Integer.parseInt(request.getParameter("id")),request.getParameter("name"),Integer.parseInt(request.getParameter("salary")));
 		
@@ -56,7 +58,10 @@ public class MainServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+		
+		System.out.println(request.getParameter("email")+request.getParameter("password"));
+		
 	}
 
 }

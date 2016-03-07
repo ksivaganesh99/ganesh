@@ -1,0 +1,26 @@
+<form class="well input-form" name="loginform" ng-submit="submit();">
+<div class="row">
+
+
+<div class="col-xs-12  form-group  has-feedback" ng-class="{'has-success' : loginform.email.$dirty && loginform.email.$valid , 'has-error' : loginform.email.$dirty && loginform.email.$invalid}">
+<!-- <label for="email" class="control-label">Email:</label> -->
+<input type="email"  class="better-placeholder form-control" name="email" id="email" placeholder="Email" ng-model="data.email"></input>
+<span class="glyphicon  form-control-feedback" ng-class="{'glyphicon-ok' : loginform.email.$dirty && loginform.email.$valid , 'glyphicon-remove' : loginform.email.$dirty && loginform.email.$invalid}" aria-hidden="true"></span>
+</div>
+<div class="col-xs-12 form-group has-feedback"  ng-class="{'has-success' : loginform.password.$dirty  && loginform.password.$valid, 'has-error' : loginform.password.$dirty && loginform.password.$invalid}">
+<!-- <label for="password" class="control-label">Password:</label> -->
+<input type="password"  class="better-placeholder form-control" id="password" name="password" placeholder="Password" ng-model="data.password" required></input>
+
+
+
+
+</div>
+
+<div class="col-xs-12">
+<button  class=" btn btn-primary pull-right btn-block"  type="submit" ng-disabled="loginform.$invalid && loading">Submit</button>
+</div>
+<p class="" ng-hide="loading"><span class="glyphicon glyphicon-refresh"></span>...Processing</p>
+</div>
+
+
+</form>
